@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="col-md-8" offset-md-2>
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="userForm">
+                    <div class="form-group">
+                        <label for="userName">User Name</label>
+                        <input type="text" formControlName="userName" class="form-control" id="userName">
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">User Role</label>
+                        <select id="userRole" formControlName="userRole" class="form-control">
+                            <option value="Candidate">Candidate</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button *ngIf="!isinEditMode" type="submit" class="btn btn-outline-primary btn-block">Add User</button>
+                        <button *ngIf="isinEditMode" type="button"
+                        class="btn btn-outline-primary btn-block"
+                        (click)="onUpdateUser()"
+                        >Update User</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

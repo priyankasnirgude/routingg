@@ -1,0 +1,24 @@
+
+<div class="col-md-12 text-right mb-4">
+    <button 
+    routerLink="addproduct"
+    class="btn btn-outline-primary btn-sm">Add Product</button>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li 
+            routerLink="{{product.pid}}"
+            [queryParams]="{
+                canEdit : product.canReturn
+            }"
+            *ngFor="let product of productsData"
+            class="list-group-item">
+            {{product.pname}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+</div>

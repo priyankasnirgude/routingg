@@ -1,0 +1,15 @@
+
+
+<p>The Product is <strong>{{productObj.pname}}</strong> and its status is 
+<strong>{{productObj.pstatus}}</strong></p>
+
+<hr>
+
+<button routerLink="edit" 
+[queryParamsHandling]="'preserve'"
+class="btn btn-outline-primary btn-sm mr-3">
+    Edit Product
+</button>
+<button class="btn btn-outline-danger btn-sm" (click)="onRemoveProduct()">
+    Remove Product
+</button>
