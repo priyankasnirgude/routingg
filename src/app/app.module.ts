@@ -15,7 +15,6 @@ import { ProductFormComponent } from './shared/components/products/product-form/
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditUserComponent } from './shared/components/users/edit-user/edit-user.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
-import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +27,14 @@ import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confi
     ProductComponent,
     ProductFormComponent,
     EditUserComponent,
-    PageNotFoundComponent,
-    ConfirmDialogComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
